@@ -202,33 +202,39 @@ export default function Dashboard() {
           <CardTitle className="text-2xl">Gambaran Umum Demografi</CardTitle>
           <CardDescription>Data kependudukan Desa Calungbungur</CardDescription>
         </CardHeader>
+        {/* Demographic Data */}
+
         <CardContent>
-  <Carousel className="w-full">
-    <CarouselContent>
-      {villageOfficials.map((official, index) => (
-        <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/6">
-          <div className="text-center">
-            <div className="w-32 h-32 relative rounded-full overflow-hidden mx-auto mb-3">
+          <div className="flex flex-col md:flex-row gap-6 items-center">
+            <div className="w-full md:w-1/2">
               <Image
-                src={official.image || "/placeholder.svg"}
-                alt={official.name}
-                fill
-                className="object-cover"
+                src="/images/demografi.png"
+                alt="Data Demografi Desa Calungbungur"
+                width={600}
+                height={400}
+                className="rounded-lg"
               />
             </div>
-            <h3 className="font-semibold text-gray-900 text-sm">
-              {official.name}
-            </h3>
-            <p className="text-xs text-gray-600">{official.position}</p>
+            <div className="w-full md:w-1/2 space-y-4">
+              <p className="text-gray-700">
+                Berdasarkan data administrasi kependudukan, Desa Calungbungur memiliki jumlah penduduk sebanyak 3.236
+                jiwa dengan komposisi:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Jumlah Kepala Keluarga: 804 KK</li>
+                <li>Jumlah Penduduk: 3.236 Jiwa</li>
+                <li>Laki-laki: 1.591 Jiwa</li>
+                <li>Perempuan: 1.645 Jiwa</li>
+              </ul>
+              <p className="text-gray-700">
+                Penduduk tersebar di 4 kampung dengan jumlah yang bervariasi, dengan RW 002 memiliki jumlah penduduk
+                terbanyak yaitu 1.292 jiwa.
+              </p>
+            </div>
           </div>
-        </CarouselItem>
-      ))}
-    </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
-  </Carousel>
-</CardContent>
+        </CardContent>
       </Card>
+      
 
       {/* Village History Section */}
       <Card className="mb-8">
