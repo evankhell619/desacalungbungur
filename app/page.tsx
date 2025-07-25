@@ -16,14 +16,20 @@ import {
   Heart,
 } from "lucide-react";
 import Image from "next/image";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { DemographicCharts } from "@/components/demographic-charts";
 
 export default function Dashboard() {
   const stats = [
     {
       title: "Total Penduduk",
-      value: "3,236",
+      value: "3,240",
       description: "Warga aktif desa",
       icon: Users,
       color: "text-blue-600",
@@ -31,122 +37,121 @@ export default function Dashboard() {
     },
     {
       title: "Penduduk Laki-laki",
-      value: "1,591",
-      description: "49.2% dari populasi",
+      value: "1,620",
+      description: "50% dari populasi",
       icon: UserCheck,
       color: "text-green-600",
       bgColor: "bg-green-100",
     },
     {
       title: "Penduduk Perempuan",
-      value: "1,645",
-      description: "50.8% dari populasi",
+      value: "1,620",
+      description: "50% dari populasi",
       icon: UserX,
       color: "text-pink-600",
       bgColor: "bg-pink-100",
     },
-  ];
+  ]
 
   const additionalStats = [
     {
       title: "Kepala Keluarga",
-      value: "804",
+      value: "968",
       icon: Home,
       color: "text-orange-600",
     },
     {
-      title: "Bekerja",
-      value: "1,890",
+      title: "Usia Produktif",
+      value: "2,383",
       icon: Briefcase,
       color: "text-indigo-600",
     },
     {
-      title: "Pelajar",
-      value: "456",
+      title: "Anak Usia Sekolah",
+      value: "414",
       icon: GraduationCap,
       color: "text-yellow-600",
     },
     {
-      title: "Fasilitas Kesehatan",
-      value: "3 Posyandu",
+      title: "Balita",
+      value: "243",
       icon: Heart,
       color: "text-red-600",
     },
-  ];
+  ]
 
   const villageOfficials = [
-  {
-    name: "AHYANI",
-    position: "Kepala Desa",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
-  },
-  {
-    name: "A C I P",
-    position: "Sekretaris Desa",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
-  },
-  {
-    name: "HERMAWAN",
-    position: "Kasi Pemerintahan & Trantib",
-    image: "https://randomuser.me/api/portraits/men/3.jpg",
-  },
-  {
-    name: "SAEPUL TURMUDI",
-    position: "Kasi Ekbang & Kesra",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
-  },
-  {
-    name: "MUHAMAD SUBANDI",
-    position: "Kaur Umum",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    name: "MADSUHI.S.Pd.I",
-    position: "Kaur Keuangan",
-    image: "https://randomuser.me/api/portraits/men/6.jpg",
-  },
-  {
-    name: "SAMHADI",
-    position: "Staf Administrasi Keuangan",
-    image: "https://randomuser.me/api/portraits/men/7.jpg",
-  },
-  {
-    name: "EMANG",
-    position: "Staf Pengolah Data",
-    image: "https://randomuser.me/api/portraits/men/8.jpg",
-  },
-  {
-    name: "PENTI",
-    position: "Jaga Desa 1",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
-  },
-  {
-    name: "ILYAS",
-    position: "Jaga Desa 2",
-    image: "https://randomuser.me/api/portraits/men/10.jpg",
-  },
-  {
-    name: "SARIP",
-    position: "Jaga Desa 3",
-    image: "https://randomuser.me/api/portraits/men/11.jpg",
-  },
-  {
-    name: "UPAH MASPUPAH",
-    position: "MTD",
-    image: "https://randomuser.me/api/portraits/men/12.jpg",
-  },
-  {
-    name: "MUHAMAD SUHARTONO",
-    position: "Staf Sekertariat BPD",
-    image: "https://randomuser.me/api/portraits/men/13.jpg",
-  },
-  {
-    name: "ROHANI",
-    position: "Staf Kebersihan",
-    image: "https://randomuser.me/api/portraits/men/14.jpg",
-  },
-];
-
+    {
+      name: "AHYANI",
+      position: "Kepala Desa",
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+    },
+    {
+      name: "A C I P",
+      position: "Sekretaris Desa",
+      image: "https://randomuser.me/api/portraits/men/2.jpg",
+    },
+    {
+      name: "HERMAWAN",
+      position: "Kasi Pemerintahan & Trantib",
+      image: "https://randomuser.me/api/portraits/men/3.jpg",
+    },
+    {
+      name: "SAEPUL TURMUDI",
+      position: "Kasi Ekbang & Kesra",
+      image: "https://randomuser.me/api/portraits/men/4.jpg",
+    },
+    {
+      name: "MUHAMAD SUBANDI",
+      position: "Kaur Umum",
+      image: "https://randomuser.me/api/portraits/men/5.jpg",
+    },
+    {
+      name: "MADSUHI.S.Pd.I",
+      position: "Kaur Keuangan",
+      image: "https://randomuser.me/api/portraits/men/6.jpg",
+    },
+    {
+      name: "SAMHADI",
+      position: "Staf Administrasi Keuangan",
+      image: "https://randomuser.me/api/portraits/men/7.jpg",
+    },
+    {
+      name: "EMANG",
+      position: "Staf Pengolah Data",
+      image: "https://randomuser.me/api/portraits/men/8.jpg",
+    },
+    {
+      name: "PENTI",
+      position: "Jaga Desa 1",
+      image: "https://randomuser.me/api/portraits/men/9.jpg",
+    },
+    {
+      name: "ILYAS",
+      position: "Jaga Desa 2",
+      image: "https://randomuser.me/api/portraits/men/10.jpg",
+    },
+    {
+      name: "SARIP",
+      position: "Jaga Desa 3",
+      image: "https://randomuser.me/api/portraits/men/11.jpg",
+    },
+    {
+      name: "UPAH MASPUPAH",
+      position: "MTD",
+      image: "https://randomuser.me/api/portraits/men/12.jpg",
+    },
+    {
+      name: "MUHAMAD SUHARTONO",
+      position: "Staf Sekertariat BPD",
+      image: "https://randomuser.me/api/portraits/men/13.jpg",
+    },
+    {
+      name: "ROHANI",
+      position: "Staf Kebersihan",
+      image: "https://randomuser.me/api/portraits/men/14.jpg",
+    },
+  ];
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -174,67 +179,34 @@ export default function Dashboard() {
       {/* Main Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {stats.map((stat) => {
-          const Icon = stat.icon;
+          const Icon = stat.icon
           return (
             <Card key={stat.title} className="relative overflow-hidden">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-gray-600">
-                  {stat.title}
-                </CardTitle>
+                <CardTitle className="text-sm font-medium text-gray-600">{stat.title}</CardTitle>
                 <div className={`p-2 rounded-full ${stat.bgColor}`}>
                   <Icon className={`h-4 w-4 ${stat.color}`} />
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-gray-900 mb-1">
-                  {stat.value}
-                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
                 <p className="text-xs text-gray-500">{stat.description}</p>
               </CardContent>
             </Card>
-          );
+          )
         })}
       </div>
 
-      {/* Demographic Data */}
+      {/* Interactive Demographic Charts */}
       <Card className="mb-8">
         <CardHeader>
           <CardTitle className="text-2xl">Gambaran Umum Demografi</CardTitle>
-          <CardDescription>Data kependudukan Desa Calungbungur</CardDescription>
+          <CardDescription>Visualisasi interaktif data kependudukan Desa Calungbungur</CardDescription>
         </CardHeader>
-        {/* Demographic Data */}
-
         <CardContent>
-          <div className="flex flex-col md:flex-row gap-6 items-center">
-            <div className="w-full md:w-1/2">
-              <Image
-                src="/images/demografi.png"
-                alt="Data Demografi Desa Calungbungur"
-                width={600}
-                height={400}
-                className="rounded-lg"
-              />
-            </div>
-            <div className="w-full md:w-1/2 space-y-4">
-              <p className="text-gray-700">
-                Berdasarkan data administrasi kependudukan, Desa Calungbungur memiliki jumlah penduduk sebanyak 3.236
-                jiwa dengan komposisi:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Jumlah Kepala Keluarga: 804 KK</li>
-                <li>Jumlah Penduduk: 3.236 Jiwa</li>
-                <li>Laki-laki: 1.591 Jiwa</li>
-                <li>Perempuan: 1.645 Jiwa</li>
-              </ul>
-              <p className="text-gray-700">
-                Penduduk tersebar di 4 kampung dengan jumlah yang bervariasi, dengan RW 002 memiliki jumlah penduduk
-                terbanyak yaitu 1.292 jiwa.
-              </p>
-            </div>
-          </div>
+          <DemographicCharts />
         </CardContent>
       </Card>
-      
 
       {/* Village History Section */}
       <Card className="mb-8">

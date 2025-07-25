@@ -25,74 +25,66 @@ import {
 export default function Enterprise() {
   const enterprises = [
     {
-      name: "Koperasi Pertanian Calungbungur",
-      type: "Pertanian",
+      name: "Baso Apung",
+      type: "Makanan",
       description:
-        "Koperasi milik masyarakat yang memproduksi sayuran organik dan beras untuk pasar lokal dan regional.",
-      employees: 45,
-      revenue: "Rp 2.3M",
+        "Baso milik masyarakat yang diproduksi daging untuk pasar lokal dan regional.",
+      employees: 5,
+      revenue: "Rp 5 Jt",
       established: "2018",
       contact: {
-        phone: "(0252) 111-2222",
-        email: "info@koperasi-calungbungur.id",
-        address: "Jl. Pertanian No. 456, Desa Calungbungur",
+        phone: "(081) 111-2222",
+        email: "info@basoapung-calungbungur.id",
+        address: "Jl. Makanan No. 456, Desa Calungbungur",
       },
       status: "Aktif",
     },
     {
-      name: "Kerajinan Tradisional Desa",
-      type: "Kerajinan",
+      name: "Keripik Pisang dan Singkong",
+      type: "Makanan",
       description:
-        "Produk kerajinan tangan tradisional yang dibuat oleh pengrajin lokal, dijual secara lokal dan online.",
-      employees: 12,
-      revenue: "Rp 450K",
+        "Produk Makanan tangan tradisional yang dibuat oleh pengrajin lokal, dijual secara lokal dan online.",
+      employees: 10,
+      revenue: "Rp 4 Jt",
       established: "2020",
       contact: {
-        phone: "(0252) 333-4444",
-        email: "order@kerajinan-calungbungur.id",
-        address: "Jl. Kerajinan No. 789, Desa Calungbungur",
+        phone: "(081) 333-4444",
+        email: "order@Makanan-calungbungur.id",
+        address: "Jl. Makanan No. 789, Desa Calungbungur",
       },
       status: "Aktif",
     },
-    {
-      name: "Wisata Desa Calungbungur",
-      type: "Pariwisata",
-      description:
-        "Layanan wisata alam dan budaya yang menampilkan warisan desa, jalur alam, dan pengalaman lokal.",
-      employees: 8,
-      revenue: "Rp 320K",
-      established: "2019",
-      contact: {
-        phone: "(0252) 555-6666",
-        email: "wisata@calungbungur-tour.id",
-        address: "Jl. Wisata No. 321, Desa Calungbungur",
-      },
-      status: "Aktif",
-    },
-    {
-      name: "Proyek Energi Masyarakat",
-      type: "Energi",
-      description:
-        "Koperasi energi surya dan angin yang menyediakan energi bersih untuk warga desa dan sekitarnya.",
-      employees: 15,
-      revenue: "Rp 1.8M",
-      established: "2021",
-      contact: {
-        phone: "(0252) 777-8888",
-        email: "info@energi-calungbungur.id",
-        address: "Jl. Energi Hijau No. 654, Desa Calungbungur",
-      },
-      status: "Berkembang",
-    },
-  ];
 
+  ];
+// count total revenue and format it
+  const parseRevenue = (revenue: string): number => {
+  const cleaned = revenue.replace(/[^\d]/g, ""); // hanya angka
+  const isJt = revenue.toLowerCase().includes("jt");
+
+  const numeric = parseInt(cleaned, 10);
+  return isNaN(numeric) ? 0 : numeric * (isJt ? 1_000_000 : 1);
+};
+
+const formatCurrencyShort = (value: number): string => {
+  if (value >= 1_000_000_000) return `Rp ${Math.round(value / 1_000_000_000)} M`;
+  if (value >= 1_000_000) return `Rp ${Math.round(value / 1_000_000)} Jt`;
+  return `Rp ${value.toLocaleString("id-ID")}`;
+};
+//count end
+
+
+const totalRevenueValue = enterprises.reduce(
+  (sum, enterprise) => sum + parseRevenue(enterprise.revenue),
+  0
+);
   // Update stats calculation for Indonesian currency
   const totalStats = {
     totalEmployees: enterprises.reduce(
       (sum, enterprise) => sum + enterprise.employees,
       0
     ),
-    totalRevenue: "Rp 4.87M",
+    // totalRevenue: "Rp 4.87M",
+    totalRevenue: formatCurrencyShort(totalRevenueValue),
     totalEnterprises: enterprises.length,
     avgEmployees: Math.round(
       enterprises.reduce((sum, enterprise) => sum + enterprise.employees, 0) /

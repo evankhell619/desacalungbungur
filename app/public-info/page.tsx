@@ -2,6 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Phone, Mail, Clock, MapPin, AlertCircle, FileText } from "lucide-react"
+import { DocumentManager } from "@/components/document-manager"
+import { DocumentList } from "@/components/document-list"
 
 export default function PublicInfo() {
   const emergencyContacts = [
@@ -147,7 +149,7 @@ export default function PublicInfo() {
         </CardContent>
       </Card>
 
-      {/* Documents and Forms */}
+      {/* Documents and Forms
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
@@ -179,7 +181,12 @@ export default function PublicInfo() {
             ))}
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
+
+      {/* Dynamic Documents and Forms Manager
+      <DocumentManager /> */}
+      {/* Documents from public/files folder */}
+      <DocumentList />
     </div>
   )
 }
