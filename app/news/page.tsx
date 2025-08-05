@@ -54,6 +54,12 @@ export default function News() {
                   {featuredNews.category}
                 </Badge>
               </div>
+              <Link href={`https://www.kompasiana.com/kkm64calungbungur/687b6a7aed64156bb3602862/observasi-mahasiswa-universitas-bina-bangsa-kesekolah-sd-1-calung-bungur-kec-sajira-lebak-banten?utm_source=Whatsapp&utm_medium=Refferal&utm_campaign=Sharing_Desktop`}>
+                <Button>
+                  Sumber Berita
+                  <Megaphone className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
               <Link href={`/news/${featuredNews.id}`}>
                 <Button>
                   Baca Selengkapnya
@@ -99,7 +105,7 @@ export default function News() {
         ))}
       </div>
 
-     
+
     </div>
   )
 }

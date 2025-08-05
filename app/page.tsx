@@ -45,7 +45,7 @@ export default function Dashboard() {
     },
     {
       title: "Penduduk Perempuan",
-      value: "1,620",
+      value: "1,296",
       description: "50% dari populasi",
       icon: UserX,
       color: "text-pink-600",
@@ -251,7 +251,7 @@ export default function Dashboard() {
             </p>
             <p>
               Desa Calungbungur merupakan salah satu desa dengan jumlah penduduk
-              3,236 yang terdiri dari laki-laki 1,591 dan perempuan 1,645. Desa
+              3,236 yang terdiri dari laki-laki 1,620 dan perempuan 1,296. Desa
               Calungbungur memiliki 5 kampung diantaranya ialah:
             </p>
             <ul className="list-disc list-inside space-y-1 ml-4">
