@@ -8,6 +8,7 @@ export interface NewsArticle {
   category: string;
   featured: boolean;
   image?: string;
+  sourceUrl: string;
 }
 
 export const newsData: NewsArticle[] = [
@@ -33,148 +34,88 @@ export const newsData: NewsArticle[] = [
     category: "Acara",
     featured: true,
     image: "/images/acara1.png",
+    sourceUrl:
+      "https://www.kompasiana.com/kkm64calungbungur/687b6a7aed64156bb3602862/observasi-mahasiswa-universitas-bina-bangsa-kesekolah-sd-1-calung-bungur-kec-sajira-lebak-banten?utm_source=Whatsapp&utm_medium=Refferal&utm_campaign=Sharing_Desktop",
   },
 
   ///
-  // {
-  //   id: "layanan-kesehatan-baru",
-  //   title: "Layanan Kesehatan Baru Tersedia",
-  //   excerpt:
-  //     "Puskesmas desa kini menawarkan jam operasional yang diperpanjang dan layanan medis tambahan untuk melayani masyarakat dengan lebih baik.",
-  //   content: `
-  //     <p>Dalam upaya meningkatkan pelayanan kesehatan bagi masyarakat Desa Calungbungur, Puskesmas Pembantu (Pustu) desa telah meluncurkan program layanan kesehatan baru yang lebih komprehensif dan mudah diakses.</p>
+  {
+    id: "KKM-64-Uniba-Gelar-Lomba",
+    title: "KKM 64 Uniba Gelar Lomba Kegiatan Keagamaan",
+    excerpt:
+      "Berlokasi di TPA Saung Hijaiyah, Desa Calung Bungur Kecamatan Sajira Kabupaten Lebak, Mahasiswa Universitas Bina Bangsa (Uniba) menggelar sejumlah lomba yang berkaitan dengan keagamaan.",
+    content: `
+      <p>Kegiatan yang digelar Kelompok Kuliah Kerja Mahasiswa (KKM) 64 Uniba itu bertemakan Pekan Ceria Anak Sholeh dan Sholehah.
+Ketua KKM Uniba Kelompok 64, Rizki Rifaldi, mengatakan kegiatan tersebut dilaksanakan dalam rangka meningkatkan semangat syiar Islam dan menumbuhkan kecintaan anak-anak terhadap kegiatan keagamaan.</p>
 
-  //     <h3>Layanan Baru yang Tersedia</h3>
-  //     <p>Mulai tanggal 12 Januari 2024, masyarakat dapat menikmati layanan kesehatan baru berupa:</p>
-  //     <ul>
-  //       <li>Pemeriksaan kesehatan umum dengan dokter umum</li>
-  //       <li>Layanan kesehatan ibu dan anak (KIA)</li>
-  //       <li>Imunisasi lengkap untuk bayi dan balita</li>
-  //       <li>Pemeriksaan kesehatan lansia</li>
-  //       <li>Konsultasi gizi dan kesehatan keluarga</li>
-  //       <li>Layanan rujukan ke rumah sakit kabupaten</li>
-  //     </ul>
+    <p>"Setiap cabang lomba tidak hanya menguji kemampuan peserta, namun juga menjadi sarana pembentukan karakter dan penguatan nilai-nilai spiritual sejak dini," terangnya.
 
-  //     <h3>Jam Operasional Diperpanjang</h3>
-  //     <p>Untuk memberikan kemudahan akses, jam operasional Pustu kini diperpanjang menjadi:</p>
-  //     <ul>
-  //       <li>Senin - Jumat: 07.00 - 19.00 WIB</li>
-  //       <li>Sabtu: 07.00 - 15.00 WIB</li>
-  //       <li>Minggu: 08.00 - 12.00 WIB (layanan darurat)</li>
-  //     </ul>
+Lanjut Rizki, peserta kegiatan merupakan anak-anak dari TPA Saung Hijaiyah dan beberapa anak sekitar desa yang aktif mengikuti kegiatan keagamaan.
 
-  //     <h3>Tenaga Medis Profesional</h3>
-  //     <p>Layanan kesehatan baru ini didukung oleh tenaga medis profesional yang terdiri dari 1 dokter umum, 2 bidan, dan 3 perawat yang telah berpengalaman dalam pelayanan kesehatan masyarakat.</p>
+Dengan mengenakan pakaian muslim dan muslimah yang rapi dan penuh semangat, para peserta satu per satu menunjukkan kemampuan terbaik mereka di hadapan para juri dan penonton.</p>
+    `,
+    date: "2025-08-11",
+    author: "Pemerintah Desa",
+    category: "Komunitas",
+    featured: false,
+    image: "/images/acara2.png",
+    sourceUrl:
+      "https://www.bantenekspose.id/banten/amp/23415707362/tingkatkan-semangat-syiar-islam-kkm-64-uniba-gelar-lomba-kegiatan-keagamaan-di-desa-calung-bungur",
+  },
+  {
+    id: "mahasiswa-kkm-64-universitas-bina-bangsa-gelar-penyuluhan-phbs-di-sdn-1-calung-bungur",
+    title:
+      "Mahasiswa KKM 64 Universitas Bina Bangsa Gelar Penyuluhan PHBS di SDN 1 Calung Bungur",
+    excerpt:
+      " Mahasiswa Kuliah Kerja Mahasiswa (KKM) Kelompok 64 Universitas Bina Bangsa (Uniba) menggelar kegiatan penyuluhan Perilaku Hidup Bersih dan Sehat (PHBS) di SDN 1 Calung Bungur, Kecamatan Sajira Kabupaten Lebak.",
+    content: `
+      <p>Kegiatan yang mengusung tema “Masa Pubertas Sehat, Masa Depan Cerah, dan Pentingnya Mencuci Tangan” kegiatan ini berlangsung pada Kamis 31 Juli 2025.
 
-  //     <p>Seluruh layanan kesehatan ini dapat diakses dengan menggunakan BPJS Kesehatan atau pembayaran mandiri dengan tarif yang terjangkau sesuai dengan peraturan yang berlaku.</p>
-  //   `,
-  //   date: "2024-01-12",
-  //   author: "dr. Sari Wulandari",
-  //   category: "Kesehatan",
-  //   featured: false,
-  //   image: "/placeholder.svg?height=400&width=800&text=Layanan+Kesehatan",
-  // },
-  // {
-  //   id: "proyek-pemeliharaan-jalan",
-  //   title: "Proyek Pemeliharaan Jalan Selesai",
-  //   excerpt: "Proyek renovasi jalan utama telah berhasil diselesaikan lebih cepat dari jadwal.",
-  //   content: `
-  //     <p>Alhamdulillah, proyek pemeliharaan dan perbaikan jalan utama Desa Calungbungur telah selesai dilaksanakan pada tanggal 10 Januari 2024, lebih cepat 2 minggu dari jadwal yang direncanakan.</p>
 
-  //     <h3>Rincian Proyek</h3>
-  //     <p>Proyek yang dimulai pada bulan November 2023 ini meliputi:</p>
-  //     <ul>
-  //       <li>Perbaikan jalan utama sepanjang 2,5 kilometer</li>
-  //       <li>Pemasangan drainase di sepanjang jalan</li>
-  //       <li>Perbaikan jembatan kecil di 3 titik</li>
-  //       <li>Pemasangan rambu-rambu lalu lintas</li>
-  //       <li>Perbaikan bahu jalan dan trotoar</li>
-  //     </ul>
+"Tujuannya adalah memberikan edukasi kesehatan kepada siswa-siswi sekolah dasar melalui pendekatan yang menyenangkan dan mudah dipahami," kata Ketua Kelompok KKM 64 Rizki Rifaldi.
+Dalam kegiatan tersebut, mahasiswa KKM Uniba menyampaikan materi melalui berbagai metode interaktif, seperti games edukatif, simulasi cara mencuci tangan yang benar, dan sesi tanya jawab.
 
-  //     <h3>Anggaran dan Sumber Dana</h3>
-  //     <p>Total anggaran proyek ini sebesar Rp 850 juta yang bersumber dari:</p>
-  //     <ul>
-  //       <li>Dana Desa (DD): Rp 400 juta</li>
-  //       <li>Alokasi Dana Desa (ADD): Rp 300 juta</li>
-  //       <li>Bantuan Keuangan Kabupaten: Rp 150 juta</li>
-  //     </ul>
+Menurut Rizki, pendekatan ini dipilih agar siswa lebih mudah memahami pentingnya menjaga kebersihan diri dan menjalani masa pubertas dengan sehat.</p>
+    `,
+    date: "2025-08-01",
+    author: "Pemerintah Desa",
+    category: "Komunitas",
+    featured: false,
+    image: "/images/acara3.png",
+    sourceUrl:
+      "https://www.bantenekspose.id/pendidikan/23415647710/mahasiswa-kkm-64-universitas-bina-bangsa-gelar-penyuluhan-phbs-di-sdn-1-calung-bungur",
+  },
+  {
+    id: "mahasiswa-kkm-64-universitas-bina-bangsa-bantu-suplai-telur-untuk-umkm-di-desa-calung-bungur",
+    title:
+      "Mahasiswa KKM 64 Universitas Bina Bangsa Bantu Suplai Telur untuk UMKM di Desa Calung Bungur",
+    excerpt:
+      "Mahasiswa Kuliah Kerja Mahasiswa (KKM) Kelompok 64 Universitas Bina Bangsa (Uniba) tahun 2025 turut berkontribusi dalam mendukung pertumbuhan ekonomi lokal.",
+    content: `
+      <p>Ketua KKM Uniba Kelompok 64, Rizki Rifaldi, menyampaikan kegiatan ini dilaksanakan sebagai bentuk pengabdian kepada masyarakat oleh mahasiswa Uniba yang tengah menjalani program KKM pada tahun 2025, fokus di Calung Bugur.
 
-  //     <h3>Manfaat bagi Masyarakat</h3>
-  //     <p>Dengan selesainya proyek ini, diharapkan dapat memberikan manfaat berupa:</p>
-  //     <ul>
-  //       <li>Kemudahan akses transportasi warga</li>
-  //       <li>Peningkatan keselamatan berkendara</li>
-  //       <li>Kemudahan distribusi hasil pertanian</li>
-  //       <li>Peningkatan nilai ekonomi desa</li>
-  //       <li>Pengurangan biaya perawatan kendaraan</li>
-  //     </ul>
+"Tujuan dari kegiatan, tak lain untuk membantu mempermudah akses pasokan telur ayam yang menjadi salah satu bahan baku utama bagi pelaku UMKM, seperti pembuat kue tradisional, jajanan pasar, dan makanan siap saji," kata Rizki.
 
-  //     <p>Kepala Desa Calungbungur, Bapak Ahyani, mengucapkan terima kasih kepada seluruh pihak yang telah mendukung terlaksananya proyek ini, terutama kepada masyarakat yang telah bersabar selama proses pembangunan berlangsung.</p>
-  //   `,
-  //   date: "2024-01-10",
-  //   author: "Dinas Pekerjaan Umum",
-  //   category: "Infrastruktur",
-  //   featured: false,
-  //   image: "/placeholder.svg?height=400&width=800&text=Perbaikan+Jalan",
-  // },
-  // {
-  //   id: "kebun-komunitas-baru",
-  //   title: "Peluncuran Inisiatif Kebun Komunitas",
-  //   excerpt:
-  //     "Warga sekarang dapat mengajukan permohonan untuk mendapatkan lahan di kebun komunitas baru kami yang terletak di dekat taman pusat.",
-  //   content: `
-  //     <p>Komite Lingkungan Desa Calungbungur dengan dukungan penuh dari pemerintah desa meluncurkan program Kebun Komunitas yang bertujuan untuk meningkatkan ketahanan pangan dan mempererat hubungan sosial antar warga.</p>
+Lanjutnya, melalui inisiatif ini, mahasiswa menjalin kerja sama langsung dengan peternak ayam petelur dari wilayah sekitar untuk memasok telur secara langsung tanpa perantara.
+Menurut Rizki, kendala utama yang selama ini dihadapi UMKM di desa tersebut adalah terbatasnya akses terhadap pasokan telur yang stabil dan terjangkau.
 
-  //     <h3>Lokasi dan Fasilitas</h3>
-  //     <p>Kebun komunitas seluas 2 hektar ini terletak di area dekat taman pusat desa dan dilengkapi dengan:</p>
-  //     <ul>
-  //       <li>100 petak lahan berukuran 3x4 meter</li>
-  //       <li>Sistem irigasi tetes modern</li>
-  //       <li>Gudang penyimpanan alat dan pupuk</li>
-  //       <li>Area kompos komunal</li>
-  //       <li>Gazebo untuk pertemuan dan edukasi</li>
-  //       <li>Akses jalan yang mudah dijangkau</li>
-  //     </ul>
+Melalui program KKM, mahasiswa berperan aktif menjembatani kebutuhan pelaku usaha dengan para peternak, sehingga pasokan dapat terjaga dengan kualitas yang baik dan harga yang lebih bersaing.
 
-  //     <h3>Syarat dan Ketentuan</h3>
-  //     <p>Warga yang ingin berpartisipasi dapat mengajukan permohonan dengan syarat:</p>
-  //     <ul>
-  //       <li>Warga Desa Calungbungur yang terdaftar dalam KTP</li>
-  //       <li>Berkomitmen merawat lahan minimal 1 tahun</li>
-  //       <li>Mengikuti aturan dan jadwal yang ditetapkan</li>
-  //       <li>Berpartisipasi dalam kegiatan gotong royong</li>
-  //       <li>Membayar iuran pemeliharaan Rp 25.000/bulan</li>
-  //     </ul>
-
-  //     <h3>Program Pendampingan</h3>
-  //     <p>Setiap peserta akan mendapatkan:</p>
-  //     <ul>
-  //       <li>Pelatihan teknik bercocok tanam organik</li>
-  //       <li>Bantuan bibit dan pupuk organik tahap awal</li>
-  //       <li>Pendampingan dari penyuluh pertanian</li>
-  //       <li>Akses ke pasar hasil panen melalui koperasi desa</li>
-  //     </ul>
-
-  //     <h3>Cara Pendaftaran</h3>
-  //     <p>Pendaftaran dibuka mulai tanggal 8 Januari 2024 dan dapat dilakukan di kantor desa dengan membawa:</p>
-  //     <ul>
-  //       <li>Fotocopy KTP</li>
-  //       <li>Fotocopy Kartu Keluarga</li>
-  //       <li>Surat pernyataan kesediaan bermaterai</li>
-  //     </ul>
-
-  //     <p>Untuk informasi lebih lanjut, hubungi Komite Lingkungan melalui kantor desa atau datang langsung pada jam kerja.</p>
-  //   `,
-  //   date: "2024-01-08",
-  //   author: "Komite Lingkungan",
-  //   category: "Komunitas",
-  //   featured: false,
-  //   image: "/placeholder.svg?height=400&width=800&text=Kebun+Komunitas",
-  // },
+“Kami percaya bahwa pemberdayaan ekonomi masyarakat dapat dimulai dari langkah-langkah sederhana. Membantu memastikan ketersediaan bahan baku seperti telur ayam merupakan bentuk dukungan nyata terhadap kelangsungan usaha kecil di pedesaan,” sambung Rizki.</p>
+    `,
+    date: "2025-08-02",
+    author: "Kepala Desa",
+    category: "Komunitas",
+    featured: false,
+    image: "/images/acara4.png",
+    sourceUrl:
+      "https://www.bantenekspose.id/ekonomi/amp/23415655170/mahasiswa-kkm-64-universitas-bina-bangsa-bantu-suplai-telur-untuk-umkm-di-desa-calung-bungur",
+  },
   // {
   //   id: "notulen-rapat-dewan-desa",
   //   title: "Notulen Rapat Dewan Desa",
-  //   excerpt: "Ringkasan keputusan yang dibuat selama rapat dewan desa bulanan termasuk persetujuan anggaran.",
+  //   excerpt:
+  //     "Ringkasan keputusan yang dibuat selama rapat dewan desa bulanan termasuk persetujuan anggaran.",
   //   content: `
   //     <p>Pada tanggal 5 Januari 2024, telah dilaksanakan Rapat Dewan Desa Calungbungur yang dihadiri oleh seluruh anggota BPD, perangkat desa, dan perwakilan masyarakat. Berikut adalah ringkasan keputusan penting yang dihasilkan:</p>
 
@@ -230,7 +171,8 @@ export const newsData: NewsArticle[] = [
   // {
   //   id: "panduan-keselamatan-musim-hujan",
   //   title: "Panduan Keselamatan Musim Hujan",
-  //   excerpt: "Tips dan panduan keselamatan penting bagi warga selama musim hujan.",
+  //   excerpt:
+  //     "Tips dan panduan keselamatan penting bagi warga selama musim hujan.",
   //   content: `
   //     <p>Memasuki musim hujan, Komite Keselamatan Desa Calungbungur mengeluarkan panduan keselamatan untuk membantu warga menghadapi berbagai risiko yang mungkin timbul selama periode ini.</p>
 

@@ -29,7 +29,7 @@ export default function NewsDetailPageClient() {
     const colors: { [key: string]: string } = {
       Acara: "bg-purple-100 text-purple-800",
       Kesehatan: "bg-red-100 text-red-800",
-      Infrastruktur: "bg-blue-100 text-blue-800",
+      Bansos: "bg-blue-100 text-blue-800",
       Komunitas: "bg-green-100 text-green-800",
       Pemerintahan: "bg-gray-100 text-gray-800",
       Keamanan: "bg-orange-100 text-orange-800",
@@ -83,12 +83,7 @@ export default function NewsDetailPageClient() {
             <Button
               variant="outline"
               size="sm"
-              onClick={() =>
-                window.open(
-                  "https://www.kompasiana.com/kkm64calungbungur/687b6a7aed64156bb3602862/observasi-mahasiswa-universitas-bina-bangsa-kesekolah-sd-1-calung-bungur-kec-sajira-lebak-banten?utm_source=Whatsapp&utm_medium=Refferal&utm_campaign=Sharing_Desktop",
-                  "_blank"
-                )
-              }
+              onClick={() => window.open(article.sourceUrl, "_blank")}
             >
               Sumber
             </Button>

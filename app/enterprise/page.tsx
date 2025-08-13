@@ -25,16 +25,17 @@ import {
 export default function Enterprise() {
   const enterprises = [
     {
-      name: "Baso Apung",
+      name: "Keripik Ruhay",
       type: "Makanan",
       description:
-        "Baso milik masyarakat yang diproduksi daging untuk pasar lokal dan regional.",
+        "Keripik Ruhay adalah produk makanan ringan yang terbuat dari bahan-bahan berkualitas tinggi dan diproses secara tradisional.",
+      image: "/images/food2.jpeg",
       employees: 5,
       revenue: "Rp 5 Jt",
       established: "2018",
       contact: {
-        phone: "(081) 111-2222",
-        email: "info@basoapung-calungbungur.id",
+        phone: "Suti : 0858-8279-2091",
+        email: "info@keripikruhay-calungbungur.id",
         address: "Jl. Makanan No. 456, Desa Calungbungur",
       },
       status: "Aktif",
@@ -44,13 +45,14 @@ export default function Enterprise() {
       type: "Makanan",
       description:
         "Produk Makanan tangan tradisional yang dibuat oleh pengrajin lokal, dijual secara lokal dan online.",
+        image: "/images/food2.jpeg",
       employees: 10,
       revenue: "Rp 4 Jt",
       established: "2020",
       contact: {
-        phone: "(081) 333-4444",
+        phone: "Suti : 0858-8279-2091",
         email: "order@Makanan-calungbungur.id",
-        address: "Jl. Makanan No. 789, Desa Calungbungur",
+        address: "Jl.Muncang-Sabagi Rangkas Bitung Kp.Karian Baru Desa Calung Bungur, kec.sajira-lebak, 42371",
       },
       status: "Aktif",
     },
@@ -219,6 +221,13 @@ const totalRevenueValue = enterprises.reduce(
               <CardDescription className="text-base">
                 {enterprise.description}
               </CardDescription>
+              {enterprise.image && (
+    <img
+      src={enterprise.image}
+      alt={enterprise.name}
+      className="mt-3 w-full h-48 object-cover rounded-lg"
+    />
+  )}
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Key Metrics */}

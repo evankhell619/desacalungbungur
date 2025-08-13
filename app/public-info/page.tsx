@@ -7,10 +7,10 @@ import { DocumentList } from "@/components/document-list"
 
 export default function PublicInfo() {
   const emergencyContacts = [
-    { service: "Layanan Darurat", number: "112", available: "24/7" },
-    { service: "Kantor Desa", number: "(0252) 123-4567", available: "Sen-Jum 8:00-17:00" },
-    { service: "Puskesmas", number: "(0252) 234-5678", available: "Sen-Sab 7:00-19:00" },
-    { service: "Pemeliharaan", number: "(0252) 345-6789", available: "Sen-Jum 7:00-16:00" },
+    // { service: "Layanan Darurat", number: "112", available: "24/7" },
+    { service: "Kantor Desa", number: "0857 7688 8813", available: "Hermawan" },
+    { service: "Kantor Desa", number: "0878 2220 0364", available: "Madsuhi" },
+    // { service: "Pemeliharaan", number: "(0252) 345-6789", available: "Sen-Jum 7:00-16:00" },
   ]
 
   const publicServices = [
@@ -95,25 +95,25 @@ export default function PublicInfo() {
             <div className="space-y-3">
               <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                 <span className="font-medium">Senin - Jumat</span>
-                <Badge variant="secondary">08:00 - 17:00</Badge>
+                <Badge variant="secondary">08:00 - 16:00</Badge>
               </div>
-              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+              {/* <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
                 <span className="font-medium">Sabtu</span>
                 <Badge variant="outline">09:00 - 13:00</Badge>
-              </div>
+              </div> */}
               <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                <span className="font-medium">Minggu</span>
-                <Badge variant="secondary">Tutup</Badge>
+                <span className="font-medium">Sabtu - Minggu</span>
+                <Badge variant="secondary">Libur</Badge>
               </div>
             </div>
             <div className="pt-4 border-t">
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <MapPin className="w-4 h-4" />
-                <span>Balai Desa, 123 Jalan Utama</span>
+                <span>CalungBungur</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-gray-600 mt-1">
                 <Mail className="w-4 h-4" />
-                <span>info@konoha.desa</span>
+                <span>desa.calungbungur@gmail.com</span>
               </div>
             </div>
           </CardContent>

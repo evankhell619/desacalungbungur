@@ -19,7 +19,7 @@ export default function Map() {
           <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center relative overflow-hidden">
             {/* Google Maps Embed Placeholder */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.60901411593!2d106.2318!3d-6.5622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c8b16ee07ef5%3A0x14ab253dd267de49!2sLebak%20Regency%2C%20Banten!5e0!3m2!1sen!2sid!4v1635123456789!5m2!1sen!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3246.849264089086!2d106.3090247749925!3d-6.476450893515367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjgnMzUuMiJTIDEwNsKwMTgnNDEuOCJF!5e1!3m2!1sen!2sid!4v1755096090476!5m2!1sen!2sid"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -44,7 +44,7 @@ export default function Map() {
                 <MapPin className="w-5 h-5 text-blue-600" />
                 <div>
                   <p className="font-medium">Alamat</p>
-                  <p className="text-gray-600">Desa Calungbungur, Kecamatan Sajira, Kabupaten Lebak, Banten</p>
+                  <p className="text-gray-600">Jl. Muncang-Sabagi Rangkas Bitung Kp.Karian Baru Desa Calungbungur, Kec. Sajira-Banten 42371</p>
                 </div>
               </div>
             </div>
