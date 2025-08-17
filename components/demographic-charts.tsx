@@ -11,7 +11,7 @@ export function DemographicCharts() {
     labels: ["Laki-laki", "Perempuan"],
     datasets: [
       {
-        data: [1620, 1620], // Updated: 1620 male, 1620 female (total 3240)
+        data: [1944, 1296], // Updated: 1944 male, 1296 female (total 3240)
         backgroundColor: ["#3B82F6", "#EC4899"],
         borderColor: ["#2563EB", "#DB2777"],
         borderWidth: 2,

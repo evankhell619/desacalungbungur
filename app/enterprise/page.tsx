@@ -28,7 +28,7 @@ export default function Enterprise() {
       name: "Keripik Ruhay",
       type: "Makanan",
       description:
-        "Keripik Ruhay adalah produk makanan ringan yang terbuat dari bahan-bahan berkualitas tinggi dan diproses secara tradisional.",
+        "Keripik Ruhay merupakan salah satu kontribusi mahasiswa KKM 64 Universitas Bina Bangsa dibuat untuk UMKM desa. Keripik ini dbuat dari bahan lokal. Salah satu alasan pembuatan UMKM ini adalah karena banyak ketersediaan bahan baku dari hasil panen lokal di desa ini. Pemanfaatkan bahan baku seperti sigkong dan pisang menjadi peluang bagi warga desa untuk mendukung perekonomian desa secara keberlanjutan",
       image: "/images/food2.jpeg",
       employees: 5,
       revenue: "Rp 5 Jt",
@@ -41,44 +41,61 @@ export default function Enterprise() {
       status: "Aktif",
     },
     {
-      name: "Keripik Pisang dan Singkong",
+      name: "Bakso Apung",
       type: "Makanan",
       description:
-        "Produk Makanan tangan tradisional yang dibuat oleh pengrajin lokal, dijual secara lokal dan online.",
-        image: "/images/food2.jpeg",
-      employees: 10,
+        "Bakso Apung merupakan salah satu UMKM yang sudah berkembang di Desa Calung Bungur, menjadi salah satu tempat yang menarik bagi pengunjung, berbeda dari tempat lain yaitu bakso ini berada di atas danau karian yang mengapung. Bakso apung adalah contoh bagaimana inovasi sederhana dapat mengubah produk tradisional menjadi sesuatu yang menarik.",
+      image: "/images/food2.jpeg",
+      employees: 5,
       revenue: "Rp 4 Jt",
       established: "2020",
       contact: {
-        phone: "Suti : 0858-8279-2091",
-        email: "order@Makanan-calungbungur.id",
-        address: "Jl.Muncang-Sabagi Rangkas Bitung Kp.Karian Baru Desa Calung Bungur, kec.sajira-lebak, 42371",
+        phone: "Umaenah 0878-0676-9766",
+        email: "bakso@Makanan-calungbungur.id",
+        address:
+          "Kampung baru, Desa Calungbungur, Kec. Sajira, Kabupaten Lebak, Banten 42371",
       },
       status: "Aktif",
     },
-
+    {
+      name: "Sentra Telur",
+      type: "Bahan Pangan",
+      description:
+        "Sentra Telur UMKM ini bergerak di bidang peternakan ayam petelur dan penjualan telur di Desa Calung Bungur. UMKM ini memiliki skala yang cukup untuk memenuhi permintaan lokal maupun regional.",
+      image: "/images/food3.jpeg",
+      employees: 5,
+      revenue: "Rp 4 Jt",
+      established: "2020",
+      contact: {
+        phone: "Andi 062 852-1083-3427",
+        email: "telur@Makanan-calungbungur.id",
+        address:
+          "Kp.Karian Baru Desa Calung Bungur, kec sajira",
+      },
+      status: "Aktif",
+    }
   ];
-// count total revenue and format it
+  // count total revenue and format it
   const parseRevenue = (revenue: string): number => {
-  const cleaned = revenue.replace(/[^\d]/g, ""); // hanya angka
-  const isJt = revenue.toLowerCase().includes("jt");
+    const cleaned = revenue.replace(/[^\d]/g, ""); // hanya angka
+    const isJt = revenue.toLowerCase().includes("jt");
 
-  const numeric = parseInt(cleaned, 10);
-  return isNaN(numeric) ? 0 : numeric * (isJt ? 1_000_000 : 1);
-};
+    const numeric = parseInt(cleaned, 10);
+    return isNaN(numeric) ? 0 : numeric * (isJt ? 1_000_000 : 1);
+  };
 
-const formatCurrencyShort = (value: number): string => {
-  if (value >= 1_000_000_000) return `Rp ${Math.round(value / 1_000_000_000)} M`;
-  if (value >= 1_000_000) return `Rp ${Math.round(value / 1_000_000)} Jt`;
-  return `Rp ${value.toLocaleString("id-ID")}`;
-};
-//count end
+  const formatCurrencyShort = (value: number): string => {
+    if (value >= 1_000_000_000)
+      return `Rp ${Math.round(value / 1_000_000_000)} M`;
+    if (value >= 1_000_000) return `Rp ${Math.round(value / 1_000_000)} Jt`;
+    return `Rp ${value.toLocaleString("id-ID")}`;
+  };
+  //count end
 
-
-const totalRevenueValue = enterprises.reduce(
-  (sum, enterprise) => sum + parseRevenue(enterprise.revenue),
-  0
-);
+  const totalRevenueValue = enterprises.reduce(
+    (sum, enterprise) => sum + parseRevenue(enterprise.revenue),
+    0
+  );
   // Update stats calculation for Indonesian currency
   const totalStats = {
     totalEmployees: enterprises.reduce(
@@ -222,12 +239,12 @@ const totalRevenueValue = enterprises.reduce(
                 {enterprise.description}
               </CardDescription>
               {enterprise.image && (
-    <img
-      src={enterprise.image}
-      alt={enterprise.name}
-      className="mt-3 w-full h-48 object-cover rounded-lg"
-    />
-  )}
+                <img
+                  src={enterprise.image}
+                  alt={enterprise.name}
+                  className="mt-3 w-full h-48 object-cover rounded-lg"
+                />
+              )}
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Key Metrics */}

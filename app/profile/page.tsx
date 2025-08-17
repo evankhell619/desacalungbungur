@@ -48,7 +48,7 @@ export default function Profile() {
       {/* Hero Image */}
       <div className="w-full h-64 md:h-96 relative rounded-lg overflow-hidden mb-8">
         <Image
-          src="/images/2.png"
+          src="/images/bg2.jpeg"
           alt="Desa Calungbungur"
           fill
           className="object-cover"

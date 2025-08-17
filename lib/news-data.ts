@@ -111,6 +111,48 @@ Melalui program KKM, mahasiswa berperan aktif menjembatani kebutuhan pelaku usah
     sourceUrl:
       "https://www.bantenekspose.id/ekonomi/amp/23415655170/mahasiswa-kkm-64-universitas-bina-bangsa-bantu-suplai-telur-untuk-umkm-di-desa-calung-bungur",
   },
+  {
+    id: "mahasiswa-kkm-64-universitas-bina-bangsa-gelar-program-pahlawan-kecil-lingkungan-di-sd-desa-calung-bungur",
+    title:
+      "Mahasiswa KKM 64 UNIBA Gelar Program “Pahlawan Kecil Lingkungan” di SD Desa Calung Bungur",
+    excerpt:
+      "mahasiswa KKM 64 UNIBA menggelar program “Pahlawan Kecil Lingkungan” di SD Desa Calung Bungur",
+    content: `
+      <p>Mahasiswa Kuliah Kerja Mahasiswa (KKM) Universitas Bina Bangsa (UNIBA) Kelompok 64 melaksanakan program bertema “Pahlawan Kecil Lingkungan” di salah satu sekolah dasar di Desa Calung Bungur.
+
+
+Kegiatan ini bertujuan menanamkan kesadaran menjaga kelestarian lingkungan sekaligus melatih keterampilan menanam sejak usia dini.</p>
+    `,
+    date: "2025-08-14",
+    author: "Kepala Desa",
+    category: "Komunitas",
+    featured: false,
+    image: "/images/acara5.png",
+    sourceUrl:
+      "https://www.swarabanten.com/2025/08/mahasiswa-kkm-64-uniba-gelar-program.html",
+  },
+  {
+    id: "kedepankan-agama-kelompok-64-mahasiswa-kkm-uniba-salurkan-bantuan-iqra-di-sajira",
+    title:
+      "Kedepankan Agama, Kelompok 64 Mahasiswa KKM Uniba Salurkan Bantuan Iqra di Sajira",
+    excerpt:
+      "mahasiswa KKM 64 UNIBA menggelar program “Pahlawan Kecil Lingkungan” di SD Desa Calung Bungur",
+    content: `
+      <p>Kelompok 64 Kuliah Kerja Mahasiswa (KKM) Universitas Bina Bangsa (Uniba), telah menunjukkan kepeduliannya terhadap pendidikan agama di masyarakat.
+
+Melalui program kerja yang berfokus pada pengabdian masyarakat, mereka menyalurkan bantuan berupa buku Iqra dan Juz Amma, serta aktif berpartisipasi dalam kegiatan gotong royong untuk memperbaiki fasilitas di Taman Pendidikan Al-Quran (TPA) Kampung Cikepek, Desa Calung Bungur, Sajira-Lebak.
+
+
+Kegiatan ini merupakan bagian dari upaya mahasiswa untuk berkontribusi langsung dalam meningkatkan kualitas pembelajaran agama, khususnya bagi anak-anak diusia dini.</p>
+    `,
+    date: "2025-08-14",
+    author: "Kepala Desa",
+    category: "Komunitas",
+    featured: false,
+    image: "/images/acara6.png",
+    sourceUrl:
+      "https://www.bantenraya.com/kampus/12715726908/kedepankan-agama-kelompok-64-mahasiswa-kkm-uniba-salurkan-bantuan-iqra-di-sajira",
+  },
   // {
   //   id: "notulen-rapat-dewan-desa",
   //   title: "Notulen Rapat Dewan Desa",

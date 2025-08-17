@@ -37,7 +37,7 @@ export default function Dashboard() {
     },
     {
       title: "Penduduk Laki-laki",
-      value: "1,620",
+      value: "1,944",
       description: "50% dari populasi",
       icon: UserCheck,
       color: "text-green-600",
@@ -51,7 +51,7 @@ export default function Dashboard() {
       color: "text-pink-600",
       bgColor: "bg-pink-100",
     },
-  ]
+  ];
 
   const additionalStats = [
     {
@@ -78,78 +78,78 @@ export default function Dashboard() {
       icon: Heart,
       color: "text-red-600",
     },
-  ]
+  ];
 
   const villageOfficials = [
     {
       name: "AHYANI",
       position: "Kepala Desa",
-      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      image: "/images/kepaladesa.png",
     },
     {
       name: "A C I P",
       position: "Sekretaris Desa",
-      image: "https://randomuser.me/api/portraits/men/2.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "HERMAWAN",
       position: "Kasi Pemerintahan & Trantib",
-      image: "https://randomuser.me/api/portraits/men/3.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "SAEPUL TURMUDI",
       position: "Kasi Ekbang & Kesra",
-      image: "https://randomuser.me/api/portraits/men/4.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "MUHAMAD SUBANDI",
       position: "Kaur Umum",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "MADSUHI.S.Pd.I",
       position: "Kaur Keuangan",
-      image: "https://randomuser.me/api/portraits/men/6.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "SAMHADI",
       position: "Staf Administrasi Keuangan",
-      image: "https://randomuser.me/api/portraits/men/7.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "EMANG",
       position: "Staf Pengolah Data",
-      image: "https://randomuser.me/api/portraits/men/8.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "PENTI",
       position: "Jaga Desa 1",
-      image: "https://randomuser.me/api/portraits/men/9.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "ILYAS",
       position: "Jaga Desa 2",
-      image: "https://randomuser.me/api/portraits/men/10.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "SARIP",
       position: "Jaga Desa 3",
-      image: "https://randomuser.me/api/portraits/men/11.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "UPAH MASPUPAH",
       position: "MTD",
-      image: "https://randomuser.me/api/portraits/men/12.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "MUHAMAD SUHARTONO",
       position: "Staf Sekertariat BPD",
-      image: "https://randomuser.me/api/portraits/men/13.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
     {
       name: "ROHANI",
       position: "Staf Kebersihan",
-      image: "https://randomuser.me/api/portraits/men/14.jpg",
+      image: "https://cdn-icons-png.flaticon.com/512/149/149071.png",
     },
   ];
 
@@ -164,7 +164,7 @@ export default function Dashboard() {
         {/* Full-width Hero Image */}
         <div className="w-full h-64 md:h-96 relative rounded-lg overflow-hidden mb-8">
           <Image
-            src="/images/1.png"
+            src="/images/bg2.jpeg"
             alt="Pemandangan Desa Calungbungur"
             fill
             className="object-cover"
@@ -179,21 +179,25 @@ export default function Dashboard() {
       {/* Main Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {stats.map((stat) => {
-          const Icon = stat.icon
+          const Icon = stat.icon;
           return (
             <Card key={stat.title} className="relative overflow-hidden">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-gray-600">{stat.title}</CardTitle>
+                <CardTitle className="text-sm font-medium text-gray-600">
+                  {stat.title}
+                </CardTitle>
                 <div className={`p-2 rounded-full ${stat.bgColor}`}>
                   <Icon className={`h-4 w-4 ${stat.color}`} />
                 </div>
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">
+                  {stat.value}
+                </div>
                 <p className="text-xs text-gray-500">{stat.description}</p>
               </CardContent>
             </Card>
-          )
+          );
         })}
       </div>
 
@@ -201,7 +205,9 @@ export default function Dashboard() {
       <Card className="mb-8">
         <CardHeader>
           <CardTitle className="text-2xl">Gambaran Umum Demografi</CardTitle>
-          <CardDescription>Visualisasi interaktif data kependudukan Desa Calungbungur</CardDescription>
+          <CardDescription>
+            Visualisasi interaktif data kependudukan Desa Calungbungur
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <DemographicCharts />
