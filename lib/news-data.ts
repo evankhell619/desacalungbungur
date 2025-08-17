@@ -171,6 +171,22 @@ Mohon doa dan restu dari semua pihak agar setiap program kerja yang akan kami ja
     image: "/images/news8.png",
     sourceUrl:
       "https://www.kompasiana.com/kkm64calungbungur/687b2fffc925c41d787470f2/penerimaan-mahasiswa-universitas-bina-bangsa-di-desa-calung-bungur-kec-sajira-lebak-banten?utm_source=Whatsapp&utm_medium=Refferal&utm_campaign=Sharing_Desktop",
+  },{
+    id: "alat-peniris-minyak-berbasis-smart-breaker",
+    title:
+      "ALAT PENIRIS MINYAK BERBASIS SMART BREAKER : UPAYA MENINGKATKAN PRODUKTIVITAS DAN KUALITAS PRODUK UMKM DI DESA CALUNG BUNGUR KABUPATEN LEBAK",
+    excerpt:
+      "Alat peniris minyak berbasis smart breaker ini diharapkan dapat membantu UMKM di Desa Calung Bungur dalam meningkatkan produktivitas dan kualitas produk mereka.",
+    content: `
+      <p>Jurnal ini membahas tentang pengembangan alat peniris minyak berbasis smart breaker yang dirancang khusus untuk memenuhi kebutuhan UMKM di Desa Calung Bungur. Dengan menggunakan teknologi smart breaker, alat ini diharapkan dapat meningkatkan efisiensi proses penirisan minyak, sehingga produk yang dihasilkan memiliki kualitas yang lebih baik dan waktu produksi yang lebih cepat.</p>
+    `,
+    date: "2025-06-30",
+    author: "Kepala Desa",
+    category: "Komunitas",
+    featured: false,
+    image: "/images/news9.png",
+    sourceUrl:
+      "https://journal.univpancasila.ac.id/index.php/JANATA/article/view/9071",
   },
   // {
   //   id: "notulen-rapat-dewan-desa",
