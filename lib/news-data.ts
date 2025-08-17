@@ -136,14 +136,9 @@ Kegiatan ini bertujuan menanamkan kesadaran menjaga kelestarian lingkungan sekal
     title:
       "Kedepankan Agama, Kelompok 64 Mahasiswa KKM Uniba Salurkan Bantuan Iqra di Sajira",
     excerpt:
-      "mahasiswa KKM 64 UNIBA menggelar program “Pahlawan Kecil Lingkungan” di SD Desa Calung Bungur",
+      "Kelompok 64 Kuliah Kerja Mahasiswa (KKM) Universitas Bina Bangsa (Uniba), telah menunjukkan kepeduliannya terhadap pendidikan agama di masyarakat.",
     content: `
-      <p>Kelompok 64 Kuliah Kerja Mahasiswa (KKM) Universitas Bina Bangsa (Uniba), telah menunjukkan kepeduliannya terhadap pendidikan agama di masyarakat.
-
-Melalui program kerja yang berfokus pada pengabdian masyarakat, mereka menyalurkan bantuan berupa buku Iqra dan Juz Amma, serta aktif berpartisipasi dalam kegiatan gotong royong untuk memperbaiki fasilitas di Taman Pendidikan Al-Quran (TPA) Kampung Cikepek, Desa Calung Bungur, Sajira-Lebak.
-
-
-Kegiatan ini merupakan bagian dari upaya mahasiswa untuk berkontribusi langsung dalam meningkatkan kualitas pembelajaran agama, khususnya bagi anak-anak diusia dini.</p>
+      <p>Kelompok 64 Kuliah Kerja Mahasiswa (KKM) Universitas Bina Bangsa (Uniba), telah menunjukkan kepeduliannya terhadap pendidikan agama di masyarakat.</p>
     `,
     date: "2025-08-14",
     author: "Kepala Desa",
@@ -152,6 +147,30 @@ Kegiatan ini merupakan bagian dari upaya mahasiswa untuk berkontribusi langsung 
     image: "/images/acara6.png",
     sourceUrl:
       "https://www.bantenraya.com/kampus/12715726908/kedepankan-agama-kelompok-64-mahasiswa-kkm-uniba-salurkan-bantuan-iqra-di-sajira",
+  },
+  {
+    id: "penerimaan-mahasiswa-universitas-bina-bangsa-di-desa-calung-bungur-kec-sajira-lebak-banten",
+    title:
+      "Penerimaan Mahasiswa Universitas Bina Bangsa di Desa Calung Bungur Kec.Sajira-Lebak,Banten",
+    excerpt:
+      "Pada hari Senin, 07 Juli 2025, rombongan mahasiswa/i Universitas Bina Bangsa telah tiba dengan selamat di Desa Calung Bungur, Kecamatan Sajira, Kabupaten Lebak, Banten, untuk melaksanakan kegiatan Kuliah Kerja Mahasiswa (KKM).",
+    content: `
+      <p>Kami mengucapkan terima kasih yang sebesar-besarnya kepada Bapak Kepala Desa Calung Bungur beserta jajaran perangkat desa, serta seluruh masyarakat Desa Calung Bungur atas sambutan hangat dan dukungan yang luar biasa dalam penerimaan mahasiswa KKM kami.
+
+Kegiatan KKM ini merupakan salah satu bentuk pengabdian kepada masyarakat yang diinisiasi oleh Universitas Bina Bangsa. Kami berharap, kehadiran mahasiswa/i kami dapat memberikan kontribusi positif, berbagi ilmu, serta bersama-sama bergotong royong dengan masyarakat untuk kemajuan Desa Calung Bungur.
+
+Semoga kegiatan KKM ini berjalan lancar, memberikan manfaat nyata bagi kedua belah pihak, dan menjalin silaturahmi yang erat antara Universitas Bina Bangsa dan masyarakat Desa Calung Bungur.
+
+
+Mohon doa dan restu dari semua pihak agar setiap program kerja yang akan kami jalankan dapat terlaksana dengan baik.</p>
+    `,
+    date: "2025-08-19",
+    author: "Kepala Desa",
+    category: "Komunitas",
+    featured: false,
+    image: "/images/news8.png",
+    sourceUrl:
+      "https://www.kompasiana.com/kkm64calungbungur/687b2fffc925c41d787470f2/penerimaan-mahasiswa-universitas-bina-bangsa-di-desa-calung-bungur-kec-sajira-lebak-banten?utm_source=Whatsapp&utm_medium=Refferal&utm_campaign=Sharing_Desktop",
   },
   // {
   //   id: "notulen-rapat-dewan-desa",
@@ -280,15 +299,33 @@ Kegiatan ini merupakan bagian dari upaya mahasiswa untuk berkontribusi langsung 
 export function getNewsById(id: string): NewsArticle | undefined {
   return newsData.find((article) => article.id === id);
 }
+//static araay code
+// export function getAllNews(): NewsArticle[] {
+//   return newsData;
+// }
 
+// export function getFeaturedNews(): NewsArticle | undefined {
+//   return newsData.find((article) => article.featured);
+// }
+
+// export function getRegularNews(): NewsArticle[] {
+//   return newsData.filter((article) => !article.featured);
+// }
 export function getAllNews(): NewsArticle[] {
-  return newsData;
-}
-
-export function getFeaturedNews(): NewsArticle | undefined {
-  return newsData.find((article) => article.featured);
+  return [...newsData].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 export function getRegularNews(): NewsArticle[] {
-  return newsData.filter((article) => !article.featured);
+  return newsData
+    .filter((article) => !article.featured)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getFeaturedNews(): NewsArticle | undefined {
+  // kalau mau featured paling baru, pakai sort juga
+  return newsData
+    .filter((article) => article.featured)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())[0];
 }

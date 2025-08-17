@@ -45,7 +45,7 @@ export default function Enterprise() {
       type: "Makanan",
       description:
         "Bakso Apung merupakan salah satu UMKM yang sudah berkembang di Desa Calung Bungur, menjadi salah satu tempat yang menarik bagi pengunjung, berbeda dari tempat lain yaitu bakso ini berada di atas danau karian yang mengapung. Bakso apung adalah contoh bagaimana inovasi sederhana dapat mengubah produk tradisional menjadi sesuatu yang menarik.",
-      image: "/images/food2.jpeg",
+      image: "/images/food4.jpeg",
       employees: 5,
       revenue: "Rp 4 Jt",
       established: "2020",
@@ -69,11 +69,10 @@ export default function Enterprise() {
       contact: {
         phone: "Andi 062 852-1083-3427",
         email: "telur@Makanan-calungbungur.id",
-        address:
-          "Kp.Karian Baru Desa Calung Bungur, kec sajira",
+        address: "Kp.Karian Baru Desa Calung Bungur, kec sajira",
       },
       status: "Aktif",
-    }
+    },
   ];
   // count total revenue and format it
   const parseRevenue = (revenue: string): number => {
